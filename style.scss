@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section{
+    max-width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    .tasks_inputs{
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        input{
+           
+            width: 230px;
+            border: none;
+            &:focus{
+                outline: none;
+                border: none;
+            }
+        }
+        button{
+            background-color: tomato;
+            padding: 2px 14px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            &:hover{
+                background-color: white;
+                color: tomato;
+                letter-spacing: 2px;
+            }
+        }
+
+    }
+    .tasks{
+        .task_item{
+            background-color: white;
+            margin-top: 4px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            #done{
+                
+                background-color: rgb(23, 202, 23);
+            padding: 2px 4px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            }
+            #delete{
+                background-color: rgb(218, 65, 65);
+            padding: 2px 4px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+            }
+        }
+    }
+}
