@@ -1,13 +1,16 @@
 let task = document.getElementById('task');
 let item = document.getElementById('item');
-
 let test = [];
 let i = 0;
+
 function add(){
   let test2 = {
     task : task.value
   }
-  test.push(test2.task);
+ 
+    test.push(test2.task);
+ 
+ 
   
     item.innerHTML += `
     <div class="task_item">       
@@ -18,10 +21,8 @@ function add(){
       </div> 
       </div>
  `
-if(test.length > 0){
-  
-  console.log(test.slice(0, test.length))
-}
+ task.value = "";
+
 }
 function done(i){
   let task = document.querySelector(`.task_item:nth-child(${i})`);
@@ -33,7 +34,11 @@ function del(i){
   let task = document.querySelector(`.task_item:nth-child(${i})`);
   task.style.display = "none";
 }
-
+window.addEventListener('keydown' , event =>{
+  if (event.key === "Enter"){
+    add();
+  }
+})
 /*
 item.innerHTML = `
 <h4>${test[i]}</h4>
